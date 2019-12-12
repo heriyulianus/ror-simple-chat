@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+  /* background-image: */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p,
+form {
+  margin: 0;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 600px;
+  height: 80vh;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 1px 10px rgba(169, 166, 166, 0.4);
+  margin: 0 auto;
+}
+ 
+.chat-log {
+  box-sizing: border-box;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.chat-input-area {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  padding: 5px 16px;
+  padding-right: calc(30px + 20px);
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 0.5px solid aquamarine;
+}
+
+.submit-button {
+  visibility: hidden;
+}
