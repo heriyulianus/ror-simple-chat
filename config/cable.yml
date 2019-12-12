@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: <%= ENV.fetch("REDIS_URL") { "redis://redistogo:54433b473b61d8e3e96e18ad8f1c7623@tarpon.redistogo.com:11415/" } %>
   channel_prefix: ror_chatapp_production
