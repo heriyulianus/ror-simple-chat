@@ -1,0 +1,19 @@
+  <section class="chat-container">
+    <div class="chat-log">
+      <div class="chat-message">
+        <div class="chat-message-text" id="msg">
+          <% @messages.each do |m| %>
+           <p class="message"><span>></span> <%= m.content %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    
+    <%= form_for @message, :class => 'chat-input-area', remote: true do |f| %>
+      <%= f.text_field :content, id: 'message_content', :placeholder => 'Write something ...', :class => 'input' %>
+      <%= f.submit 'Send Message', :class => 'submit-button' %>
+    <% end %>
+</section>
+
+

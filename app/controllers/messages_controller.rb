@@ -1,5 +1,9 @@
 class MessagesController < ApplicationController
-
+  
+  def index 
+    @messages = Message.all.order("created_at ASC")
+    @message = Message.new
+  end
 
   def new
     @message = Message.new
@@ -7,7 +11,6 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create(msg_params)
-
     if @message.save 
       ActionCable.server.broadcast 'room_channel',
                                     content: @message.content

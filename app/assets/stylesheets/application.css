@@ -16,12 +16,25 @@
 
  body {
   /* background-image: */
+  background: #159957;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:  #E0F4FD;
 }
 
 p,
 form {
   margin: 0;
+}
+
+p {
+  line-height: 25px;
+}
+
+span {
+  margin-left: -5px;
 }
 
 .chat-container {
@@ -49,6 +62,7 @@ form {
   transition: all 0.5s;
 }
 
+
 .chat-input-area {
   position: relative;
 }
@@ -59,13 +73,20 @@ input {
   box-sizing: border-box;
   padding: 5px 16px;
   padding-right: calc(30px + 20px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  height: 50px;
 }
 
 input:focus {
   outline: none;
-  border-bottom: 0.5px solid aquamarine;
+  border-bottom: 5px solid #E0F4FD;
+  color:  #E0F4FD
 }
 
+input::placeholder {
+  color:  #E0F4FD
+}
 .submit-button {
   visibility: hidden;
 }

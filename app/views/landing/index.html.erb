@@ -1,6 +1,9 @@
   <section class="chat-container">
     <div class="chat-log">
       <div class="chat-message">
+        <% @messages.each do |m| %>
+          <p class="chat-message__text"><%= m.content %></p>
+        <% end %>
         <p class="chat-message__text" id="msg"></p>
       </div>
     </div>
